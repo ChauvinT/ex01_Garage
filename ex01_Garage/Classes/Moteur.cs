@@ -20,10 +20,14 @@ namespace ex01_Garage.Classes
         public TypeMoteur Type;
         public string Cylindre { get; set; }
         public double Prix { get; set; }
-        public Moteur(TypeMoteur type, string cylindre, double prix) { 
-            Type = type;
+        public Moteur( string cylindre, double prix) { 
             Cylindre = cylindre;
             Prix = prix;
+        }
+
+        public override string ToString()
+        {
+            return $"Moteur : {Type}";
         }
     }
 }

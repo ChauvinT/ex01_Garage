@@ -1,4 +1,5 @@
 ﻿using ex01_Garage.Classes;
+using ex01_Garage.Interfaces;
 
 namespace ex01_Garage
 {
@@ -13,20 +14,20 @@ namespace ex01_Garage
             Console.WriteLine(garage);
 
 
-            Vehicule lag1 = new Lagouna();
+            Vehicule lag1 = new Lagouna(24011.75, "Lagouna", new List<IOption> { }, Marque.RENO);
             
             lag1.SetMoteur(new MoteurEssence("150 Chevaux", 10256d));
 
-            lag1.AddOption(new GPS());
+            lag1.AddOption(new GPS(113.5));
 
-            lag1.AddOption(new SiegeChauffant());
+            lag1.AddOption(new SiegeChauffant(562.9));
 
-            lag1.AddOption(new VitreElectrique());
+            lag1.AddOption(new VitreElectrique(212.35));
 
             garage.AddVoiture(lag1);
 
 
-            Vehicule A300B_2 = new A300B();
+            /*Vehicule A300B_2 = new A300B();
 
             A300B_2.SetMoteur(new MoteurElectrique("1500 W", 1234d));
 
@@ -84,7 +85,7 @@ namespace ex01_Garage
 
             d4_2.AddOption(new VitreElectrique());
 
-            garage.AddVoiture(d4_2);
+            garage.AddVoiture(d4_2);*/
 
             Console.WriteLine(garage);
 

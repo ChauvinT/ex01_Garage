@@ -51,7 +51,11 @@ namespace ex01_Garage.Classes
             return IOptions ;
         }
         public double getPrix() {
-                return Prix ;
+            return Prix ;
+        }
+        public void SetMoteur(Moteur moteur)
+        {
+
         }
     }
 }

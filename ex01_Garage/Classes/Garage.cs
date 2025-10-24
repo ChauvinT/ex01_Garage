@@ -20,7 +20,13 @@ namespace ex01_Garage.Classes
 
         public override string ToString()
         {
-            return "";
+            string response = "";
+
+            foreach (Vehicule vehicule in Vehicules)
+            {
+                response = $"+ Voiture {vehicule.GetMarque()} : {vehicule.Nom} Moteur : ";
+            }
+            return response;
         }
     }
 }
