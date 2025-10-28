@@ -9,12 +9,14 @@ namespace ex01_Garage
         public static void Main(string[] args)
         {
 
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
             Garage garage = new Garage();
 
             Console.WriteLine(garage);
 
 
-            Vehicule lag1 = new Lagouna(24011.75, "Lagouna", new List<IOption> { }, Marque.RENO);
+            Vehicule lag1 = new Lagouna(23123.0, "Lagouna", new List<IOption> { }, Marque.RENO);
             
             lag1.SetMoteur(new MoteurEssence("150 Chevaux", 10256d));
 

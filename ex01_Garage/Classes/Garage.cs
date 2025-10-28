@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ex01_Garage.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,10 +22,26 @@ namespace ex01_Garage.Classes
         public override string ToString()
         {
             string response = "";
+            string options = "";
+            double prixTotal = 0;
 
+            List<IOption> lesOptions;
             foreach (Vehicule vehicule in Vehicules)
             {
-                response = $"+ Voiture {vehicule.GetMarque()} : {vehicule.Nom} Moteur : ";
+                prixTotal = 0;
+                lesOptions = vehicule.getOption();
+                foreach (IOption option in lesOptions)
+                {
+                    if (options != ""){
+                        options += ", ";
+                    } 
+                    options += $"{option.ToString()} ({option.getPrix()}€)";
+                    prixTotal += option.getPrix();
+                }
+                prixTotal += vehicule.Prix;
+                options = $"[{options}]";
+
+                response = $"+ Voiture {vehicule.GetMarque()} : {vehicule.Nom} Moteur :  ({vehicule.Prix}€) {options} d'une valeur totale de {prixTotal} €";
             }
             return response;
         }

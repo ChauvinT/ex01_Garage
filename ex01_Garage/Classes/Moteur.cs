@@ -27,7 +27,7 @@ namespace ex01_Garage.Classes
 
         public override string ToString()
         {
-            return $"Moteur : {Type}";
+            return $"Moteur : {Type} {Cylindre} chevaux";
         }
     }
 }

@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace ex01_Garage.Classes
 {
-    public class MoteurEssence : Moteur
+    public class MoteurElectrique : Moteur
     {
-        public MoteurEssence( string cylindre, double prix)
-            :base (cylindre, prix)
+        public MoteurElectrique(string cylindre, double prix)
+            : base(cylindre, prix)
         {
 
         }
         public override string ToString()
         {
-            return "Moteur ESSENCE";
+            return "Moteur ELECTRIQUE";
         }
     }
 }

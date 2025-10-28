@@ -18,5 +18,10 @@ namespace ex01_Garage.Interfaces
         {
             return Prix;
         }
+
+        public override string ToString()
+        {
+            return "Siège chauffant";
+        }
     }
 }

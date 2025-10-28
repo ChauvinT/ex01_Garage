@@ -22,7 +22,7 @@ namespace ex01_Garage.Classes
         public string Nom { get; set; }
         public List<IOption> IOptions { get; } = new List<IOption>();
         protected Marque NomMarque;
-
+        public Moteur Moteur;
         public Vehicule(double prix, string nom, List<IOption> ioptions , Marque nomMarque)
         {
             Prix = prix;
@@ -53,9 +53,10 @@ namespace ex01_Garage.Classes
         public double getPrix() {
             return Prix ;
         }
+
         public void SetMoteur(Moteur moteur)
         {
-
+            Moteur = moteur ;
         }
     }
 }
