@@ -28,7 +28,9 @@ namespace ex01_Garage.Classes
             List<IOption> lesOptions;
             foreach (Vehicule vehicule in Vehicules)
             {
+                options = "";
                 prixTotal = 0;
+
                 lesOptions = vehicule.getOption();
                 foreach (IOption option in lesOptions)
                 {
@@ -41,7 +43,7 @@ namespace ex01_Garage.Classes
                 prixTotal += vehicule.Prix;
                 options = $"[{options}]";
 
-                response = $"+ Voiture {vehicule.GetMarque()} : {vehicule.Nom} Moteur :  ({vehicule.Prix}€) {options} d'une valeur totale de {prixTotal} €";
+                response += $"+ Voiture {vehicule.GetMarque()} : {vehicule.Nom} Moteur : ({vehicule.Prix}€) {options} d'une valeur totale de {prixTotal} € \n";
             }
             return response;
         }

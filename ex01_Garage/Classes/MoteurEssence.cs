@@ -15,7 +15,7 @@ namespace ex01_Garage.Classes
         }
         public override string ToString()
         {
-            return "Moteur ESSENCE";
+            return $"Moteur ESSENCE {base.Cylindre} ({base.Prix}€)";
         }
     }
 }

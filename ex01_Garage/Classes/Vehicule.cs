@@ -22,18 +22,13 @@ namespace ex01_Garage.Classes
         public string Nom { get; set; }
         public List<IOption> IOptions { get; } = new List<IOption>();
         protected Marque NomMarque;
-        public Moteur Moteur;
+
         public Vehicule(double prix, string nom, List<IOption> ioptions , Marque nomMarque)
         {
             Prix = prix;
             Nom = nom;
             IOptions = ioptions;
             NomMarque = nomMarque;
-        }
-
-        public override string ToString()
-        {
-            return $"Nom : {Nom} / Prix : {Prix}";
         }
 
         public void AddOption(IOption opt)
@@ -56,7 +51,7 @@ namespace ex01_Garage.Classes
 
         public void SetMoteur(Moteur moteur)
         {
-            Moteur = moteur ;
+            moteur.ToString();
         }
     }
 }

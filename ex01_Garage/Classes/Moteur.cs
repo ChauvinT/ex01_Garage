@@ -24,10 +24,5 @@ namespace ex01_Garage.Classes
             Cylindre = cylindre;
             Prix = prix;
         }
-
-        public override string ToString()
-        {
-            return $"Moteur : {Type} {Cylindre} chevaux";
-        }
     }
 }
